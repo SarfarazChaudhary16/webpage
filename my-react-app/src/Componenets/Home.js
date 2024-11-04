@@ -3,25 +3,30 @@ import React from "react";
 const Home = () => {
   return (
     <>
-      <header>
-        <div className="Navbar">
-          <div id="sam">
-            <img src="Logo.svg"></img>
-          </div>
-          <div id="button">
-            &nbsp;&nbsp; Get Started &nbsp;
-            <span id="img">
-              <img src="Arrow.svg"></img>
-            </span>
-          </div>
+      <nav class="navbar">
+        <div class="navbar-logo">
+          <img src="notes.svg" alt="SmartNotes Logo" class="logo" />
+          <span class="brand-name">SmartNotes</span>
         </div>
-      </header>
+        <ul class="navbar-links">
+          <li>
+            <a href="#features">Features</a>
+          </li>
+          <li>
+            <a href="#pricing">Pricing</a>
+          </li>
+          <li>
+            <a href="#support">Support</a>
+          </li>
+        </ul>
+        <button class="get-started">
+          Get Started
+          <span class="external-link-icon">
+            <img src="Arrow11.svg"></img>
+          </span>
+        </button>
+      </nav>
 
-      <div className="nav">
-        <div id="abc">Features</div>
-        <div id="xyz">Pricing</div>
-        <div id="pqr">Support</div>
-      </div>
       <div id="fake"></div>
 
       <div className="Hero">
@@ -33,18 +38,25 @@ const Home = () => {
         <br />
         <div id="Heading">
           <div id="headline">
-            <img src="headd.svg"></img>
+            <h1>Intelligent cloud-based note-taking and collaboration tool</h1>
+            <p>
+              Experience the power of smart note-taking and transform the way
+              you work today.
+            </p>
           </div>
 
           <div id="signup">
             <br />
-            &nbsp;&nbsp;
-            <input type="email" placeholder="Enter Your Email" required></input>
-            <div id="button2">
-              &nbsp;&nbsp; Sign Up &nbsp;
-              <span id="img">
-                <img src="Arrow.svg"></img>
-              </span>
+            <div class="email-signup">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="email-input"
+              />
+              <br />
+              <button class="signup-button">
+                Sign up <img src="Arrow11.svg" alt="Arrow" class="arrow-icon" />
+              </button>
             </div>
           </div>
         </div>
@@ -220,7 +232,10 @@ const Home = () => {
           <p>Monthly</p>
           <br />
           <div id="c">
-            <img src="Toggle.svg"></img>
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
           </div>
           <br />
           <div id="d">Yearly</div>
@@ -230,14 +245,67 @@ const Home = () => {
           </div>
         </div>
         <br />
-        <div id="plans2">
-          <img src="1.svg"></img>
-        </div>
-        <div id="plans3">
-          <img src="ps.svg"></img>
-        </div>
-        <div id="plans4">
-          <img src="3.svg"></img>
+        <div class="pricing-container">
+          <div class="card">
+            <img src="Layer_1 (4).svg"></img>
+            <div class="plan-title">Individual Plan</div>
+            <div class="price">
+              $9.99 <span>/ month</span>
+            </div>
+            <ul class="features">
+              <li>Real-time collaboration</li>
+              <li>AI-powered organization</li>
+              <li>Customizable templates</li>
+              <li>5GB cloud storage</li>
+              <li>Basic integrations</li>
+            </ul>
+            <button class="cta-button">
+              Start Free Trial{" "}
+              <span>
+                <img src="arrow10.svg"></img>
+              </span>
+            </button>
+            <div class="note">No credit card required</div>
+          </div>
+          <div class="card highlighted">
+            <img src="Layer_1 (5).svg"></img>
+            <div class="plan-title">Team Plan</div>
+            <div class="price">
+              $19.99 <span>/ month</span>
+            </div>
+            <ul class="features">
+              <li>Everything in the Individual Plan</li>
+              <li>Unlimited cloud storage</li>
+              <li>Advanced integrations</li>
+              <li>Team management and permissions</li>
+              <li>Shared templates and note libraries</li>
+            </ul>
+            <button class="cta-button">
+              Start Free Trial{" "}
+              <span>
+                <img src="arrow10.svg"></img>
+              </span>
+            </button>
+            <div class="note">No credit card required</div>
+          </div>
+          <div class="card">
+            <img src="Layer_1 (5).svg"></img>
+            <div class="plan-title">Enterprise Plan</div>
+            <div class="price">Custom</div>
+            <ul class="features">
+              <li>Everything in the Team Plan</li>
+              <li>Dedicated account manager</li>
+              <li>Enterprise-grade security</li>
+              <li>Customized onboarding</li>
+              <li>Advanced analytics</li>
+            </ul>
+            <button class="cta-button">
+              Contact support
+              <span>
+                <img src="arrow10.svg"></img>
+              </span>
+            </button>
+          </div>
         </div>
       </div>
       <div id="sac">
@@ -343,7 +411,10 @@ const Home = () => {
               </p>
             </div>
             <div id="prib">
-              <img src="Primary.svg"></img>
+              <button class="signup-button">
+                Sign Up for Free
+                <img src="Arrow12.svg" alt="Arrow" class="arrow-icon" />
+              </button>
             </div>
           </div>
         </div>
@@ -376,7 +447,7 @@ const Home = () => {
               <ul>
                 <li>About</li>
                 <li>Features</li>
-                <li>Pricing</li>
+                <li style={{ color: "#017373" }}>Pricing</li>
                 <li>Integrations</li>
                 <li>FAQs</li>
               </ul>
@@ -415,19 +486,29 @@ const Home = () => {
         </div>
 
         <div class="footer-bottom">
-          <p>©2024 SmartNotes. All Rights Reserved. <a href="https://twitter.com/iamhervewabo">@iamhervewabo</a></p>
+          <p>
+            ©2024 SmartNotes. All Rights Reserved.{" "}
+            <a href="https://twitter.com/iamhervewabo">@iamhervewabo</a>
+          </p>
           <div class="social-icons">
-            <a href="#"><img src="Iconf.svg" alt="Facebook" /></a>&nbsp;&nbsp;
-            <a href="#"><img src="IconL.svg" alt="LinkedIn" /></a>&nbsp;&nbsp;
-            <a href="#"><img src="IconT.svg" alt="Twitter" /></a>&nbsp;&nbsp;
-            <a href="#"><img src="IconY.svg" alt="YouTube" /></a>
+            <a href="#">
+              <img src="Iconf.svg" alt="Facebook" />
+            </a>
+            &nbsp;&nbsp;
+            <a href="#">
+              <img src="IconL.svg" alt="LinkedIn" />
+            </a>
+            &nbsp;&nbsp;
+            <a href="#">
+              <img src="IconT.svg" alt="Twitter" />
+            </a>
+            &nbsp;&nbsp;
+            <a href="#">
+              <img src="IconY.svg" alt="YouTube" />
+            </a>
           </div>
         </div>
       </footer>
-      <div class="toggle-container">
-        <button id="toggleButton" class="toggle-button">Off</button>
-      </div>
-      <script src="script.js"></script>
     </>
   );
 };
