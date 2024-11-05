@@ -66,7 +66,7 @@ const Home = () => {
           <img src="headimg.svg"></img>
         </div>
       </div>
-      <div id="logos">
+      <div id="logos" > 
         <img src="logos.svg"></img>
         <img src="logos (1).svg"></img>
         <img src="logos (2).svg"></img>
